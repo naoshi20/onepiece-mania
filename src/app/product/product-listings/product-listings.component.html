@@ -1,0 +1,16 @@
+<div class="container">
+        <div class="row">
+                <div *ngFor="let product of products; let productId = index" class="col-sm">
+                        <a [routerLink]="[productId]">
+                                <div class="card">
+                                        <img class="card-img-top" src="./assets/img/placeholder.png" alt="Card image cap">
+                                        <div class="card-body">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                                        the
+                                                        card's content.</p>
+                                        </div>
+                                </div>
+                        </a>
+                </div>
+        </div>
+</div>
