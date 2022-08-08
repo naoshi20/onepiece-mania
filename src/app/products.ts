@@ -1,17 +1,38 @@
 export const products = [
         {
+                coverImage: "./assets/img/phone-cover.jpg",
                 name: 'Phone XL',
                 price: 799,
-                description: 'A large phone with one of the best screens'
+                description: 'A large phone with one of the best screens',
+                heading1: 'Light',
+                heading2: 'Beatiful', 
+                heading3: 'Fast',
+                headingtext1: 'text text text text text text text text text text text text text text text text ',
+                headingtext2: 'text text text text text text text text text text text text text text text text ',
+                headingtext3: 'text text text text text text text text text text text text text text text text ',           
         },
         {
+                coverImage: "./assets/img/phone-cover.jpg",
                 name: 'Phone Mini',
                 price: 699,
-                description: 'A great phone with one of the best cameras'
+                description: 'A great phone with one of the best cameras',
+                heading1: 'Light',
+                heading2: 'Beatiful',
+                heading3: 'Fast',
+                headingtext1: 'text text text text text text text text text text text text text text text text ',
+                headingtext2: 'text text text text text text text text text text text text text text text text ',
+                headingtext3: 'text text text text text text text text text text text text text text text text ',         
         },
         {
+                coverImage: "./assets/img/phone-cover.jpg",
                 name: 'Phone Standard',
                 price: 299,
-                description: ''
+                description: '',
+                heading1: 'Light',
+                heading2: 'Beatiful',
+                heading3: 'Fast',
+                headingtext1: 'text text text text text text text text text text text text text text text text ',
+                headingtext2: 'text text text text text text text text text text text text text text text text ',
+                headingtext3: 'text text text text text text text text text text text text text text text text ',         
         }
 ];
