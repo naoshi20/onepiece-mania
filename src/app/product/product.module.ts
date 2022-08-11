@@ -4,6 +4,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-listings/product-listings.component';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product.component';
+import { ProductService } from './shared/product.service';
 
 const routes: Routes = [
         {
@@ -25,7 +26,9 @@ const routes: Routes = [
                 RouterModule.forChild(routes),
                 CommonModule
         ],
-        providers: [],
+        providers: [
+                ProductService //productモジュールに対応するバックエンド通信を代行するサービスを定義
+        ],
         bootstrap: []
 })
 export class ProductModule { }
