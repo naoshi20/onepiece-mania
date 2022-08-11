@@ -1,6 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 .vscode
-/server/config/
+/server/config/dev.js
 # Compiled output
 /dist
 /tmp

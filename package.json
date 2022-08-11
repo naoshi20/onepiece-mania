@@ -7,7 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run start --prefix server",
     "start-dev": "ng serve --proxy-config proxy.cong.json",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
