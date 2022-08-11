@@ -1,11 +1,15 @@
 {
   "name": "my-first-app",
   "version": "0.0.0",
+  "engines": {
+    "node": "17.0.1",
+    "npm": "8.1.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "start-dev": "ng serve --proxy-config proxy.cong.json",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
