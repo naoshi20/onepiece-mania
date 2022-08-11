@@ -53,7 +53,21 @@ We use proxy server between client side and server side (see /proxy.conf.json)
 In /server, you should start node server.
 `$ node index.js`
 ### production environment
-comming soon
+Before deployment 
+1. In root, you have to build and make dist directory
+`$ npm run build`
+2. make MongoDB project and get connection string
+3. copy and paste it in /server/config/prod.js
+4. add connection string in Heroku configuration settings ad DB_URI
+5. test connection with production DB in local environment replacing local DB_URI with prod's one
+We use proxy server between client side and server side (see /proxy.conf.json)
+`$ npm run start-dev`
+
+In /server, you should start node server.
+`$ node index.js`
+
+initialize production database
+
 
 ## Usage
 comming soon
