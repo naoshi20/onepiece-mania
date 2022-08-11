@@ -1,27 +1,82 @@
-# MyFirstApp
+# ONEPIECE Database
+> There are many fascinating characters in ONEPIECE.
+> Don't you search your favorite characters or find interesting information? 
+> Live demo [_comming soon_](). 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+<!-- * [License](#license) -->
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## General Information
+- I have ONEPIECE character database, because I made it about thee years ago. However, It is difficult for people to see and understand table data. So I thought it is a good chance to visually show data I gathered and neatned before.
+- In terms of technology, I'm now interested in frontend development. I did not want to develop only frontend, but also backend, evenif it is simplified, and connect them by using API.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+- MEAN Stack
+	- MongoDB - v 6.0
+	- Express - v 4.18.1
+	- Angular - v 14.1.1
+	- Node.js - v 17.0.1
+- Heroku
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
+List the ready features here:
+- Display a list and details of characters
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Screenshots
+![comming soon](./img/screenshot.png)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup
+What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-## Further help
+Proceed to describe how to install / setup one's local environment / get started with the project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### local environment
+In project root, you should start angular app.
+We use proxy server between client side and server side (see /proxy.conf.json)
+`$ npm run start-dev`
+
+In /server, you should start node server.
+`$ node index.js`
+### production environment
+comming soon
+
+## Usage
+comming soon
+
+
+## Project Status
+Project is: _in progress_ 
+
+
+## Room for Improvement
+
+Room for improvement:
+- comming soon
+
+To do:
+- comming soon
+
+
+## Acknowledgements
+Thanks for your greate course.
+- [ONEPIECE Character Database](https://docs.google.com/spreadsheets/d/1izNZRVZvCMDpj7L0jAOUJj5_KcgCqnEP9mev0ZTuIi0/edit?usp=sharing) I created
+- This project was based on [this tutorial](https://www.udemy.com/course/angular-nodejs-web/learn/lecture/16704950).
+
+
+## Contact
+Created by [@naoshi20](https://github.com/naoshi20) - feel free to contact me!
