@@ -1,17 +1,12 @@
 <div *ngIf="product"><!--productが取得されない間は非表示にする-->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                <img class="first-slide"
-                                        src="{{ product.coverImage }}"
-                                        alt="First slide">
-                                <div class="container">
-                                        <div class="carousel-caption text-left">
-                                                <h1>{{ product.name }}</h1>
-                                                <p>{{ product.description }}</p>
-                                                <p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{ product.price }}</a></p>
-                                        </div>
-                                </div>
+        <div class="page-header page-header-xs" data-parallax="true"
+                [ngStyle]="{ 'background-image' : 'url(' + product.coverImage + ')'}"> <!--styleでは動的コンテンツを与えられないのでngStyleにする、プロパティバインディングは右の値を左の変数に入れる-->
+                <div class="filter"></div>
+                <div class="container">
+                        <div class="carousel-caption text-left">
+                                <h1>{{ product.name }}</h1>
+                                <p>{{ product.description }}</p>
+                                <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{ product.price }}</a></p>-->
                         </div>
                 </div>
         </div>
