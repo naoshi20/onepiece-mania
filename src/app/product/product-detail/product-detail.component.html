@@ -1,115 +1,159 @@
-<div *ngIf="product"><!--productが取得されない間は非表示にする-->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                <img class="first-slide"
-                                        src="{{ product.coverImage }}"
-                                        alt="First slide">
-                                <div class="container">
-                                        <div class="carousel-caption text-left">
-                                                <h1>{{ product.name }}</h1>
-                                                <p>{{ product.description }}</p>
-                                                <p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{ product.price }}</a></p>
-                                        </div>
-                                </div>
+<div *ngIf="product">
+        <!--productが取得されない間は非表示にする-->
+        <div class="page-header page-header-xs" data-parallax="true"
+                [ngStyle]="{ 'background-image' : 'url(' + product.coverImage + ')'}">
+                <!--styleでは動的コンテンツを与えられないのでngStyleにする、プロパティバインディングは右の値を左の変数に入れる-->
+                <div class="filter"></div>
+                <div class="container">
+                        <div class="carousel-caption text-left">
+                                <h1>{{ product.name }}</h1>
+                                <p>{{ product.description }}</p>
+                                <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{ product.price }}</a></p>-->
                         </div>
                 </div>
         </div>
 
-
-        <!-- Marketing messaging and featurettes
-        ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
-        <div class="container marketing">
-
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                        <div class="col-lg-4">
-                                <img class="rounded-circle"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        alt="Generic placeholder image" width="140" height="140">
-                                <h2>{{ product.heading1 }}</h2>
-                                <p>{{ product.headingtext1 }}</p>
-                                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4">
-                                <img class="rounded-circle"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        alt="Generic placeholder image" width="140" height="140">
-                                <h2>{{ product.heading2 }}</h2>
-                                <p>{{ product.headingtext2 }}</p>
-                                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4">
-                                <img class="rounded-circle"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        alt="Generic placeholder image" width="140" height="140">
-                                <h2>{{ product.heading3 }}</h2>
-                                <p>{{ product.headingtext3 }}</p>
-                                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                        </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-
-
-                <!-- START THE FEATURETTES -->
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                        <div class="col-md-7">
-                                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow
-                                                your mind.</span></h2>
-                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                        Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-md-5">
-                                <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                        alt="Generic placeholder image">
-                        </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                        <div class="col-md-7 order-md-2">
-                                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for
-                                                yourself.</span></h2>
-                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                        Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-md-5 order-md-1">
-                                <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                        alt="Generic placeholder image">
-                        </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                        <div class="col-md-7">
-                                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span>
-                                </h2>
-                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                        Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-md-5">
-                                <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                        alt="Generic placeholder image">
+        <div class="main">
+                <div class="section text-center">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-8 mr-auto ml-auto">
+                                                <h2 class="title">Let's talk product</h2>
+                                                <h5 class="description">This is the paragraph where you can write more
+                                                        details
+                                                        about
+                                                        your product. Keep you user engaged by providing meaningful
+                                                        information.
+                                                        Remember that by this time, the user is curious, otherwise he
+                                                        wouldn't
+                                                        scroll to
+                                                        get here. Add a button if you want the user to see more.</h5>
+                                                <br>
+                                                <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
+                                        </div>
+                                </div>
+                                <br /><br />
+                                <div class="row">
+                                        <div class="col-md-4">
+                                                <div class="info">
+                                                        <div class="icon icon-danger">
+                                                                <i class="nc-icon nc-album-2"></i>
+                                                        </div>
+                                                        <div class="description">
+                                                                <h4 class="info-title">{{ product.heading1 }}</h4>
+                                                                <h2></h2>
+                                                                <p></p>
+                                                                <p class="description">{{ product.headingtext1 }}</p>
+                                                                <a href="#pkp" class="btn btn-link btn-danger">See
+                                                                        more</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="info">
+                                                        <div class="icon icon-danger">
+                                                                <i class="nc-icon nc-bulb-63"></i>
+                                                        </div>
+                                                        <div class="description">
+                                                                <h4 class="info-title">{{ product.heading2 }}</h4>
+                                                                <h2></h2>
+                                                                <p></p>
+                                                                <p class="description">{{ product.headingtext2 }}</p>
+                                                                <a href="#pkp" class="btn btn-link btn-danger">See
+                                                                        more</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="info">
+                                                        <div class="icon icon-danger">
+                                                                <i class="nc-icon nc-chart-bar-32"></i>
+                                                        </div>
+                                                        <div class="description">
+                                                                <h4 class="info-title">{{ product.heading3 }}</h4>
+                                                                <h2></h2>
+                                                                <p></p>
+                                                                <p class="description">{{ product.headingtext3 }}</p>
+                                                                <a href="#pkp" class="btn btn-link btn-danger">See
+                                                                        more</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
                 </div>
 
-                <hr class="featurette-divider">
+                <div class="container marketing">
 
-                <!-- /END THE FEATURETTES -->
+                        <hr class="featurette-divider">
 
-        </div><!-- /.container -->
+                        <div class="row featurette">
+                                <div class="col-md-7">
+                                        <h2 class="featurette-heading">First featurette heading. <span
+                                                        class="text-muted">It'll
+                                                        blow
+                                                        your mind.</span></h2>
+                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
+                                                id ligula
+                                                porta
+                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
+                                                nisl
+                                                consectetur.
+                                                Fusce dapibus, tellus ac cursus commodo.</p>
+                                </div>
+                                <div class="col-md-5">
+                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+                                                alt="Generic placeholder image">
+                                </div>
+                        </div>
 
+                        <hr class="featurette-divider">
 
-        <!-- FOOTER -->
+                        <div class="row featurette">
+                                <div class="col-md-7 order-md-2">
+                                        <h2 class="featurette-heading">Oh yeah, it's that good. <span
+                                                        class="text-muted">See for
+                                                        yourself.</span></h2>
+                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
+                                                id ligula
+                                                porta
+                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
+                                                nisl
+                                                consectetur.
+                                                Fusce dapibus, tellus ac cursus commodo.</p>
+                                </div>
+                                <div class="col-md-5 order-md-1">
+                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+                                                alt="Generic placeholder image">
+                                </div>
+                        </div>
+
+                        <hr class="featurette-divider">
+
+                        <div class="row featurette">
+                                <div class="col-md-7">
+                                        <h2 class="featurette-heading">And lastly, this one. <span
+                                                        class="text-muted">Checkmate.</span>
+                                        </h2>
+                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
+                                                id ligula
+                                                porta
+                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
+                                                nisl
+                                                consectetur.
+                                                Fusce dapibus, tellus ac cursus commodo.</p>
+                                </div>
+                                <div class="col-md-5">
+                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+                                                alt="Generic placeholder image">
+                                </div>
+                        </div>
+
+                        <hr class="featurette-divider">
+
+                </div>
+        </div>
+
         <footer class="container">
                 <p class="float-right"><a href="#">Back to top</a></p>
                 <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>

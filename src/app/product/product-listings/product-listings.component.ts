@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
       (data) => {
         this.products = data
         console.log('got value ' + data)
-        debugger
+        //debugger
       },
       (err) => { console.error('something wrong occur') + err },
       //() => { console.log('done') } //http通信では一回のサブスクライブに対して必ず一回のレスポンスがありそれで処理は終わる。そのためcompleteを書く意味はない。
