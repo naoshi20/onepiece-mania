@@ -38,6 +38,18 @@ class SampleDb {
                                 headingtext1: 'text text text text text text text text text text text text text text text text ',
                                 headingtext2: 'text text text text text text text text text text text text text text text text ',
                                 headingtext3: 'text text text text text text text text text text text text text text text text ',
+                        },
+                        {
+                                coverImage: "./assets/img/phone-cover.jpg",
+                                name: 'Phone XL',
+                                price: 799,
+                                description: 'A large phone with one of the best screens',
+                                heading1: 'Light',
+                                heading2: 'Beatiful',
+                                heading3: 'Fast',
+                                headingtext1: 'text text text text text text text text text text text text text text text text ',
+                                headingtext2: 'text text text text text text text text text text text text text text text text ',
+                                headingtext3: 'text text text text text text text text text text text text text text text text ',
                         }
                 ]
         }
