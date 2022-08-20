@@ -25,8 +25,8 @@ class SampleDb {
                                 "first_appearance_commic": "01",
                                 "first_appearance_story": 1,
                                 "first_appearance_story_title": "ROMANCE DAWNー冒険の夜明けー",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/luffy/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/luffy/img.jpg",
                                 "ship_img": "https://1.bp.blogspot.com/-7aJ-w9XA0Go/X-_FsBS3SLI/AAAAAAAA9n8/TrCdDc1A8UgLoVjXvOqyGZkLmUCTN943wCLcBGAsYHQ/w320-h297/Hello%2BAnime%2B%2521%2B%2B%2528156%2529.jpg"
                         },
                         {
@@ -51,8 +51,8 @@ class SampleDb {
                                 "first_appearance_commic": "01",
                                 "first_appearance_story": 3,
                                 "first_appearance_story_title": "海賊狩りのゾロ登場",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/zoro/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/zoro/img.jpg",
                                 "ship_img": "https://1.bp.blogspot.com/-7aJ-w9XA0Go/X-_FsBS3SLI/AAAAAAAA9n8/TrCdDc1A8UgLoVjXvOqyGZkLmUCTN943wCLcBGAsYHQ/w320-h297/Hello%2BAnime%2B%2521%2B%2B%2528156%2529.jpg"
                         },
                         {
@@ -441,8 +441,8 @@ class SampleDb {
                                 "first_appearance_commic": "01",
                                 "first_appearance_story": 1,
                                 "first_appearance_story_title": "ROMANCE DAWNー冒険の夜明けー",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Makino/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Makino/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -1481,8 +1481,8 @@ class SampleDb {
                                 "first_appearance_commic": 11,
                                 "first_appearance_story": 98,
                                 "first_appearance_story_title": "暗雲",
-                                "face_img": "https://one-piece.com/assets/images/anime/character/data/tako_boxer/face.jpg",
-                                "img": "https://one-piece.com/assets/images/anime/character/data/tako_boxer/img.jpg",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/smoker/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/smoker/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -1716,7 +1716,7 @@ class SampleDb {
                                 "first_appearance_story": 131,
                                 "first_appearance_story_title": "ブリキのワポル",
                                 "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "img": "",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -2599,8 +2599,8 @@ class SampleDb {
                                 "first_appearance_commic": 26,
                                 "first_appearance_story": 246,
                                 "first_appearance_story_title": "迷いの森の神官サトリ",
-                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Shiki/face.jpg",
-                                "img": "https://one-piece.com/assets/images/anime/character/data/Shiki/img.jpg",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Satori/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Satori/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -2703,8 +2703,8 @@ class SampleDb {
                                 "first_appearance_commic": 27,
                                 "first_appearance_story": 249,
                                 "first_appearance_story_title": "雲隠れの村",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Wyper/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Wyper/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -3561,8 +3561,8 @@ class SampleDb {
                                 "first_appearance_commic": 39,
                                 "first_appearance_story": 368,
                                 "first_appearance_story_title": "海列車バトルゲーム",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Wanze/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Wanze/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -3665,8 +3665,8 @@ class SampleDb {
                                 "first_appearance_commic": 39,
                                 "first_appearance_story": 375,
                                 "first_appearance_story_title": "エニエス・ロビーの超人達",
-                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Cerberus/face.jpg",
-                                "img": "https://one-piece.com/assets/images/anime/character/data/Cerberus/img.jpg",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Kumadori/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Kumadori/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -4315,8 +4315,8 @@ class SampleDb {
                                 "first_appearance_commic": 51,
                                 "first_appearance_story": 497,
                                 "first_appearance_story_title": "シャボン舞う諸島の冒険",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Saint_Roswald/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Saint_Roswald/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -4731,8 +4731,8 @@ class SampleDb {
                                 "first_appearance_commic": 53,
                                 "first_appearance_story": 516,
                                 "first_appearance_story_title": "海賊女帝ボア・ハンコック",
-                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Makino/face.jpg",
-                                "img": "https://one-piece.com/assets/images/anime/character/data/Makino/img.jpg",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Boa_Marigold/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Boa_Marigold/img.jpg",
                                 "ship_img": "https://1.bp.blogspot.com/-zs8xvrlf-4Q/YBIXr5RUHCI/AAAAAAABEG4/z6pwNKHaMb0QGnzzNEstWBdn_inPRLycQCLcBGAsYHQ/w320-h288/Hello%2BAnime%2B%2521.png"
                         },
                         {
@@ -5953,8 +5953,8 @@ class SampleDb {
                                 "first_appearance_commic": 62,
                                 "first_appearance_story": 613,
                                 "first_appearance_story_title": "硬殻塔の人魚姫",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/Wadatsumi/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/Wadatsumi/img.jpg",
                                 "ship_img": "https://static.wikia.nocookie.net/onepiece/images/5/59/Snapper_Head_Infobox.png/revision/latest?cb=20170108100829"
                         },
                         {
@@ -6292,7 +6292,7 @@ class SampleDb {
                                 "first_appearance_story": 667,
                                 "first_appearance_story_title": "COOL FIGHT",
                                 "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "img": "",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -6734,7 +6734,7 @@ class SampleDb {
                                 "first_appearance_story": 704,
                                 "first_appearance_story_title": "ルーシーとキュロスの像",
                                 "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "",
+                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
@@ -7409,8 +7409,8 @@ class SampleDb {
                                 "first_appearance_commic": 80,
                                 "first_appearance_story": 805,
                                 "first_appearance_story_title": "ミンク族",
-                                "face_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
-                                "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+                                "face_img": "https://one-piece.com/assets/images/anime/character/data/wanda/face.jpg",
+                                "img": "https://one-piece.com/assets/images/anime/character/data/wanda/img.jpg",
                                 "ship_img": "https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg"
                         },
                         {
