@@ -13,7 +13,7 @@ mongoose.connect(config.DB_URI, {
         () => {
                 if (process.env.NODE_ENV !== 'production') { //本番環境ではない時のみ初期化ができるようにしておく
                         const sampleDb = new SampleDb()
-                        //sampleDb.initDb() //初期化させたい時のみコメントアウト解除
+                        sampleDb.initDb() //初期化させたい時のみコメントアウト解除
                 }
         }
 )

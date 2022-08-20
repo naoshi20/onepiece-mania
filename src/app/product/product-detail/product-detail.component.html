@@ -1,12 +1,12 @@
 <div *ngIf="product">
         <!--productが取得されない間は非表示にする-->
         <div class="page-header page-header-xs" data-parallax="true"
-                [ngStyle]="{ 'background-image' : 'url(' + product.coverImage + ')'}">
+                [ngStyle]="{ 'background-image' : 'url(' + product.ship_img + ')'}">
                 <!--styleでは動的コンテンツを与えられないのでngStyleにする、プロパティバインディングは右の値を左の変数に入れる-->
                 <div class="filter"></div>
                 <div class="container">
                         <div class="carousel-caption text-left">
-                                <h1>{{ product.name }}</h1>
+                                <h1>{{ product.char_name }}</h1>
                                 <p>{{ product.description }}</p>
                                 <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{ product.price }}</a></p>-->
                         </div>
