@@ -14,6 +14,9 @@ export class ProductListComponent implements OnInit {
     const productsObservable = this.productService.getProducts() //サービスで取得したproductsオブジェクトを取得し代入する、サービス側にオブザーバブルの処理を実装する
     productsObservable.subscribe( 
       (data) => {
+        data.sort(function (a:any, b:any) {
+          return (a.id < b.id) ? -1 : 1;
+        }); // id基準で並び替え
         this.products = data
         console.log('got value ' + data)
         //debugger

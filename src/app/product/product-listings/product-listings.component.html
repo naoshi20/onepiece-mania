@@ -1,17 +1,17 @@
 <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true"
-                style="background-image: url('./assets/img/phone-cover.jpg');">
+        <div class="page-header page-header-xs listings-header" data-parallax="true"
+                style="background-color: white; background-image: url('https://anime-number.com/wp-content/uploads/2020/05/onepiece1.jpg'); background-size: 27%; background-repeat: no-repeat;"><!--url('./assets/img/phone-cover.jpg')-->
                 <div class="filter"></div>
         </div>
         <div class="container ">
                 <div class="row">
-                        <div *ngFor="let product of products; let productId = index" class="col-md-4 col-sm">
+                        <div *ngFor="let product of products; let productId = index" class="col-md-3 col-sm">
                                 <a [routerLink]="[ product._id ]">
                                         <div class="card">
-                                                <img class="card-img-top" src="{{ product.coverImage }}"
+                                                <img class="card-img-top" src="{{ product.face_img }}"
                                                         alt="Card image cap">
                                                 <div class="card-body">
-                                                        <h5 class="card-text">{{ product.name }}</h5>
+                                                        <h5 class="card-text">{{ product.char_name }}</h5>
                                                         <p class="card-text">{{ product.description }}</p>
                                                 </div>
                                         </div>
