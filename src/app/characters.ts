@@ -1,4 +1,4 @@
-export const products = [
+export const characters = [
         {
                 coverImage: "./assets/img/phone-cover.jpg",
                 name: 'Phone XL',
