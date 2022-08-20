@@ -21,6 +21,8 @@ export class ProductDetailComponent implements OnInit {
       const productObservable = this.productService.getProductById(params.get("productId")!)
       productObservable.subscribe(
         (data) => {
+          data.birthday = data.birthday.split("-")[0].replace("0", "") + "月" + data.birthday.split("-")[1].replace("0", "") + "日"
+          //data.cv = data.cv.replace("、", "<br/>")
           this.product = data
         },
         (err) => {}

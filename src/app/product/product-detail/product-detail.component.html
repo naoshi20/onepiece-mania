@@ -12,150 +12,86 @@
                         </div>
                 </div>
         </div>
-
         <div class="main">
-                <div class="section text-center">
+                <div class="section">
                         <div class="container">
                                 <div class="row">
-                                        <div class="col-md-8 mr-auto ml-auto">
-                                                <h2 class="title">Let's talk product</h2>
-                                                <h5 class="description">This is the paragraph where you can write more
-                                                        details
-                                                        about
-                                                        your product. Keep you user engaged by providing meaningful
-                                                        information.
-                                                        Remember that by this time, the user is curious, otherwise he
-                                                        wouldn't
-                                                        scroll to
-                                                        get here. Add a button if you want the user to see more.</h5>
-                                                <br>
-                                                <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
+                                        <div class="col-sm-12 col-md-8 mr-auto ml-auto charimg-container">
+                                                <img src="{{ product.img }}">
                                         </div>
-                                </div>
-                                <br /><br />
-                                <div class="row">
-                                        <div class="col-md-4">
-                                                <div class="info">
-                                                        <div class="icon icon-danger">
-                                                                <i class="nc-icon nc-album-2"></i>
-                                                        </div>
-                                                        <div class="description">
-                                                                <h4 class="info-title">{{ product.heading1 }}</h4>
-                                                                <h2></h2>
-                                                                <p></p>
-                                                                <p class="description">{{ product.headingtext1 }}</p>
-                                                                <a href="#pkp" class="btn btn-link btn-danger">See
-                                                                        more</a>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                                <div class="info">
-                                                        <div class="icon icon-danger">
-                                                                <i class="nc-icon nc-bulb-63"></i>
-                                                        </div>
-                                                        <div class="description">
-                                                                <h4 class="info-title">{{ product.heading2 }}</h4>
-                                                                <h2></h2>
-                                                                <p></p>
-                                                                <p class="description">{{ product.headingtext2 }}</p>
-                                                                <a href="#pkp" class="btn btn-link btn-danger">See
-                                                                        more</a>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                                <div class="info">
-                                                        <div class="icon icon-danger">
-                                                                <i class="nc-icon nc-chart-bar-32"></i>
-                                                        </div>
-                                                        <div class="description">
-                                                                <h4 class="info-title">{{ product.heading3 }}</h4>
-                                                                <h2></h2>
-                                                                <p></p>
-                                                                <p class="description">{{ product.headingtext3 }}</p>
-                                                                <a href="#pkp" class="btn btn-link btn-danger">See
-                                                                        more</a>
-                                                        </div>
-                                                </div>
-                                        </div>
+                                        <ul class="col-sm-12 col-md-4 info-box">
+                                                <li *ngIf="product.birthday">
+                                                        <span>誕生日</span>
+                                                        <span>{{ product.birthday }}</span>
+                                                </li>
+                                                <li *ngIf="product.height">
+                                                        <span>身長</span>
+                                                        <span>{{ product.height }}cm</span>
+                                                </li>
+                                                <li *ngIf="product.age">
+                                                        <span>年齢</span>
+                                                        <span>{{ product.age }}歳</span>
+                                                </li>
+                                                <li *ngIf="product.blood_type">
+                                                        <span>血液型</span>
+                                                        <span>{{ product.blood_type }}</span>
+                                                </li>
+                                                <li *ngIf="product.place_of_birth">
+                                                        <span>出生地</span>
+                                                        <span>{{ product.place_of_birth }}</span>
+                                                </li>
+                                                <li *ngIf="product.favorite_food">
+                                                        <span>好物</span>
+                                                        <span>{{ product.favorite_food }}</span>
+                                                </li>
+                                                <li *ngIf="product.bounty">
+                                                        <span>懸賞金</span>
+                                                        <span>{{ product.bounty }}ベリー</span>
+                                                </li>
+                                                <li *ngIf="product.cv">
+                                                        <span>キャラクターボイス</span>
+                                                        <span>{{ product.cv }}</span>
+                                                </li>
+                                                <li *ngIf="product.popular_name">
+                                                        <span>通り名</span>
+                                                        <span>{{ product.popular_name }}</span>
+                                                </li>
+                                                <li *ngIf="product.devil_fruit">
+                                                        <span>悪魔の実</span>
+                                                        <span>{{ product.devil_fruit }}</span>
+                                                </li>
+                                                <li *ngIf="product.sovereign_haki">
+                                                        <span>覇王色の覇気</span>
+                                                        <span>{{ product.sovereign_haki }}</span>
+                                                </li>
+                                                <li *ngIf="product.observation_haki">
+                                                        <span>見聞色の覇気</span>
+                                                        <span>{{ product.observation_haki }}</span>
+                                                </li>
+                                                <li *ngIf="product.armameent_haki">
+                                                        <span>武装色の覇気</span>
+                                                        <span>{{ product.armameent_haki }}</span>
+                                                </li>
+                                                <li *ngIf="product.gender">
+                                                        <span>性別</span>
+                                                        <span>{{ product.gender }}</span>
+                                                </li>
+                                                <li *ngIf="product.first_appearance">
+                                                        <span>初登場巻</span>
+                                                        <span>{{ product.first_appearance }}</span>
+                                                </li>
+                                                <li *ngIf="product.first_appearance_story">
+                                                        <span>初登場話</span>
+                                                        <span>第{{ product.first_appearance_story }}話 {{ product.first_appearance_story_title }}</span>
+                                                </li>
+                                        </ul>
                                 </div>
                         </div>
-                </div>
-
-                <div class="container marketing">
-
-                        <hr class="featurette-divider">
-
-                        <div class="row featurette">
-                                <div class="col-md-7">
-                                        <h2 class="featurette-heading">First featurette heading. <span
-                                                        class="text-muted">It'll
-                                                        blow
-                                                        your mind.</span></h2>
-                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                                                id ligula
-                                                porta
-                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
-                                                nisl
-                                                consectetur.
-                                                Fusce dapibus, tellus ac cursus commodo.</p>
-                                </div>
-                                <div class="col-md-5">
-                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                                alt="Generic placeholder image">
-                                </div>
-                        </div>
-
-                        <hr class="featurette-divider">
-
-                        <div class="row featurette">
-                                <div class="col-md-7 order-md-2">
-                                        <h2 class="featurette-heading">Oh yeah, it's that good. <span
-                                                        class="text-muted">See for
-                                                        yourself.</span></h2>
-                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                                                id ligula
-                                                porta
-                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
-                                                nisl
-                                                consectetur.
-                                                Fusce dapibus, tellus ac cursus commodo.</p>
-                                </div>
-                                <div class="col-md-5 order-md-1">
-                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                                alt="Generic placeholder image">
-                                </div>
-                        </div>
-
-                        <hr class="featurette-divider">
-
-                        <div class="row featurette">
-                                <div class="col-md-7">
-                                        <h2 class="featurette-heading">And lastly, this one. <span
-                                                        class="text-muted">Checkmate.</span>
-                                        </h2>
-                                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                                                id ligula
-                                                porta
-                                                felis euismod semper. Praesent commodo cursus magna, vel scelerisque
-                                                nisl
-                                                consectetur.
-                                                Fusce dapibus, tellus ac cursus commodo.</p>
-                                </div>
-                                <div class="col-md-5">
-                                        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
-                                                alt="Generic placeholder image">
-                                </div>
-                        </div>
-
-                        <hr class="featurette-divider">
-
                 </div>
         </div>
 
         <footer class="container">
                 <p class="float-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>&copy; 2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
 </div>
