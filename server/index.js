@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const config = require('./config/index') //switcherを利用して環境を分ける
 const SampleDb = require('./sample-db')
 
-const productRoutes = require('./routes/products')
+const characterRoutes = require('./routes/characters')
 const path = require('path')
 //Promiseオブジェクトの状態がfullfilledになったらthenメソッドの引数であるコールバック関数が実行される。
 mongoose.connect(config.DB_URI, {
@@ -20,21 +20,21 @@ mongoose.connect(config.DB_URI, {
 
 const app = express()
 
-app.use('/api/v1/products', productRoutes)
+app.use('/api/v1/characters', characterRoutes)
 
 if (process.env.NODE_ENV === 'production') {
         const appPath = path.join(__dirname, '..', 'dist', 'my-first-app') //pathのベタ書き注意
         app.use(express.static(appPath))
-        app.get("*", function(req, res) {
+        app.get("*", function (req, res) {
                 res.sendFile(path.resolve(appPath, 'index.html'))
         })
         console.log("using production settings")
-} else{
+} else {
         console.log("using development settings")
 }
 
 const PORT = process.env.PORT || '3001' //Herokuに対応
 
-app.listen(PORT, function(){
+app.listen(PORT, function () {
         console.log('I am running!')
 })

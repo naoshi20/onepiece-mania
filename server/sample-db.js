@@ -1,8 +1,8 @@
-const Product = require('./model/product')
+const Character = require('./model/character')
 
 class SampleDb {
         constructor() {
-                this.products = [
+                this.characters = [
                         {
                                 "id": 1,
                                 "char_name": "モンキー・D・ルフィ",
@@ -8458,24 +8458,24 @@ class SampleDb {
         //非同期関数（処理内部でawaitを使用し非同期関数の実行が完了するまで一部の処理を停止する関数）
         async initDb() {
                 await this.cleanDb() //非同期関数でありPromiseを返す
-                this.pushProductsToDb() //Promiseの状態がfullfilledになったタイミングでこの関数が実行される、それまでは実行されない
+                this.pushCharactersToDb() //Promiseの状態がfullfilledになったタイミングでこの関数が実行される、それまでは実行されない
         }
         //Promiseを返す非同期関数
         async cleanDb() {
-                await Product.deleteMany({})//deleteManyも非同期関数、Promiseを返す。そのままPromiseを返す関数なので非同期関数になる。
+                await Character.deleteMany({})//deleteManyも非同期関数、Promiseを返す。そのままPromiseを返す関数なので非同期関数になる。
         }
 
-        pushProductsToDb() {
-                this.products.forEach(
-                        (product) => {
-                                const newProduct = new Product(product)
-                                newProduct.save()
+        pushCharactersToDb() {
+                this.characters.forEach(
+                        (character) => {
+                                const newCharacter = new Character(character)
+                                newCharacter.save()
                         }
                 )
         }
 
         seeDb() {
-                this.pushProductsToDb()
+                this.pushCharactersToDb()
         }
 }
 

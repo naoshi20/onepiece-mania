@@ -2,10 +2,10 @@ const mongoose = require("mongoose")
 
 const Schema = mongoose.Schema;
 
-const ProductSchema = Schema({
+const CharacterSchema = Schema({
         coverImage: String,
         name: String,
-        price: Number, 
+        price: Number,
         descriptopn: String,//description: { type: String, max: [60, '最大60文字までです']},
         heading1: String,
         heading2: String,
@@ -40,4 +40,4 @@ const ProductSchema = Schema({
 
 })
 
-module.exports = mongoose.model('Product', ProductSchema)
+module.exports = mongoose.model('Character', CharacterSchema)
