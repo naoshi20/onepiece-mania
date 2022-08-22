@@ -1,0 +1,4 @@
+<div class="search-container">
+        <span>検索</span>
+        <input type="text" [(ngModel)]="enteredSearchValue" (keyup)="onSearchTextChanged()"><!--日本語だとinputイベントではうまくいかない→keyupイベントを使用-->
+</div>
