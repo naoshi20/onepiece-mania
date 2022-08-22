@@ -4,20 +4,22 @@
                 <!--url('./assets/img/phone-cover.jpg')-->
                 <div class="filter"></div>
         </div>
-        <div class="container ">
+        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
+        <div class="container">
                 <div class="row">
-                        <div *ngFor="let character of characters; let characterId = index" class="col-md-3 col-sm">
-                                <a [routerLink]="[ character._id ]">
-                                        <div class="card">
-                                                <img class="card-img-top" src="{{ character.face_img }}"
-                                                        alt="Card image cap">
-                                                <div class="card-body">
-                                                        <h5 class="card-text">{{ character.char_name }}</h5>
-                                                        <p class="card-text">{{ character.description }}</p>
+                        <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
+                                <div *ngIf="searchText === '' || character.char_name.includes(searchText)" class="col-md-3 col-sm">
+                                        <a [routerLink]="[ character._id ]">
+                                                <div class="card">
+                                                        <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
+                                                        <div class="card-body">
+                                                                <h5 class="card-text">{{ character.char_name }}</h5>
+                                                                <p class="card-text">{{ character.description }}</p>
+                                                        </div>
                                                 </div>
-                                        </div>
-                                </a>
-                        </div>
+                                        </a>
+                                </div>
+                        </ng-container>
                 </div>
         </div>
 </div>

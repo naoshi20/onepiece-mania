@@ -5,6 +5,8 @@ import { CharacterListComponent } from './character-listings/character-listings.
 import { CommonModule } from '@angular/common';
 import { CharacterComponent } from './character.component';
 import { CharacterService } from './shared/character.service';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
         {
@@ -20,11 +22,13 @@ const routes: Routes = [
         declarations: [
                 CharacterComponent,
                 CharacterDetailComponent,
-                CharacterListComponent
+                CharacterListComponent,
+                SearchComponent
         ],
         imports: [
                 RouterModule.forChild(routes),
-                CommonModule
+                CommonModule,
+                FormsModule
         ],
         providers: [
                 CharacterService //characterモジュールに対応するバックエンド通信を代行するサービスを定義

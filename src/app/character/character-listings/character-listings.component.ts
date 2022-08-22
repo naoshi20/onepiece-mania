@@ -44,6 +44,12 @@ export class CharacterListComponent implements OnInit {
       // console.log('just after subscribe'); //サブスクライブ関数は非同期関数なので、実行された後はその処理の完了を待たずにこの行が実行される
     )
   }
+  searchText: string = ""
+
+  onSearchTextEntered(searchValue: string){
+    this.searchText = searchValue
+    console.log(this.searchText)
+  }
 
 }
 
