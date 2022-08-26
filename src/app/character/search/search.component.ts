@@ -13,11 +13,12 @@ export class SearchComponent implements OnInit {
   }
 
   enteredSearchValue: string = ""
+  selectedPlaceOfBirth: string = "All"
 
   @Output() //カスタムイベントの定義、子コンポーネントのこのメソッドが実行されると親コンポーネントのあるメソッドを発火させたい、親コンポーネントのhtmlでバインディングする
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>()
-
-  onSearchTextChanged(){
+  
+  onSearchTextChanged() {
     this.searchTextChanged.emit(this.enteredSearchValue)
   }
 }

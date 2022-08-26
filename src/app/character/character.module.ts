@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterComponent } from './character.component';
 import { CharacterService } from './shared/character.service';
 import { SearchComponent } from './search/search.component';
+import { FilterComponent } from './filter/filter.component';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
                 CharacterComponent,
                 CharacterDetailComponent,
                 CharacterListComponent,
-                SearchComponent
+                SearchComponent,
+                FilterComponent
         ],
         imports: [
                 RouterModule.forChild(routes),

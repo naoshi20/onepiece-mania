@@ -45,11 +45,15 @@ export class CharacterListComponent implements OnInit {
     )
   }
   searchText: string = ""
+  characterCountRadioButton: string = ""
 
   onSearchTextEntered(searchValue: string){
     this.searchText = searchValue
-    console.log(this.searchText)
   }
 
+  onFilterRadioButtonChanged(data: string){
+    this.characterCountRadioButton = data
+    console.log(this.characterCountRadioButton)
+  }
 }
 

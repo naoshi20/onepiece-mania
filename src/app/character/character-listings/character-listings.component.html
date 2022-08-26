@@ -5,10 +5,11 @@
                 <div class="filter"></div>
         </div>
         <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
+        <app-filter (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter>
         <div class="container">
                 <div class="row">
                         <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
-                                <div *ngIf="searchText === '' || character.char_name.includes(searchText)" class="col-md-3 col-sm">
+                                <div *ngIf="characterCountRadioButton === 'All'|| character.place_of_birth.includes(characterCountRadioButton)" class="col-md-3 col-sm"><!--複雑な条件では関数を渡すことも可能--><!--searchText === '' ||character.char_name.includes(searchText) &&-->
                                         <a [routerLink]="[ character._id ]">
                                                 <div class="card">
                                                         <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
