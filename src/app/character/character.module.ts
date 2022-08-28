@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterComponent } from './character.component';
 import { CharacterService } from './shared/character.service';
 import { SearchComponent } from './search/search.component';
-import { FilterComponent } from './filter/filter.component';
+import { FilterPlaceOfBirthComponent } from './filter-place-of-birth/filter.component';
 import { SortComponent } from './sort/sort.component'
 import { FilterSovereignHakiComponent } from './filter-sovereign-haki/filter.component'
 import { FilterObservationHakiComponent } from './filter-observation-haki/filter.component'
@@ -29,7 +29,7 @@ const routes: Routes = [
                 CharacterDetailComponent,
                 CharacterListComponent,
                 SearchComponent,
-                FilterComponent,
+                FilterPlaceOfBirthComponent,
                 SortComponent,
                 FilterSovereignHakiComponent,
                 FilterObservationHakiComponent,

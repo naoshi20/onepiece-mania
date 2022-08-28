@@ -5,7 +5,7 @@
                 <div class="filter"></div>
         </div>
         <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
-        <app-filter (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+        <app-filter-place-of-birth (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter-place-of-birth>
         <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)"></app-filter-sovereign-haki>
         <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)"></app-filter-armameent-haki>
         <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)"></app-filter-observation-haki>
