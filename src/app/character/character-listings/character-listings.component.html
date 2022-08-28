@@ -4,15 +4,16 @@
                 <!--url('./assets/img/phone-cover.jpg')-->
                 <div class="filter"></div>
         </div>
-        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
-        <app-filter-place-of-birth (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter-place-of-birth>
-        <app-filter-devil-fruit (filterDevilFruitStatusChanged)="onFilterDevilFruitStatusChanged($event)"></app-filter-devil-fruit>
-        <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)"></app-filter-sovereign-haki>
-        <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)"></app-filter-armameent-haki>
-        <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)"></app-filter-observation-haki>
-        <app-sort (sortRadioButtonChanged)="onSort($event)"></app-sort>
         <div class="container">
                 <div class="row">
+                        <app-search (searchTextChanged)="onSearchTextEntered($event)" class="search-filter-sort-container"></app-search>
+                        <!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
+                        <app-filter-place-of-birth (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)" class="search-filter-sort-container"></app-filter-place-of-birth>
+                        <app-filter-devil-fruit (filterDevilFruitStatusChanged)="onFilterDevilFruitStatusChanged($event)" class="search-filter-sort-container"></app-filter-devil-fruit>
+                        <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)" class="search-filter-sort-container"></app-filter-sovereign-haki>
+                        <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)" class="search-filter-sort-container"></app-filter-armameent-haki>
+                        <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)" class="search-filter-sort-container"></app-filter-observation-haki>
+                        <app-sort (sortRadioButtonChanged)="onSort($event)" class="search-filter-sort-container"></app-sort>
                         <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
                                 <div *ngIf="
                                         (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === 'All' && devilFruitStatus === 'All') ||
