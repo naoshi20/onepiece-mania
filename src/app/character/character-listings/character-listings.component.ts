@@ -45,15 +45,28 @@ export class CharacterListComponent implements OnInit {
     )
   }
   searchText: string = ""
-  characterCountRadioButton: string = ""
-
   onSearchTextEntered(searchValue: string){
     this.searchText = searchValue
   }
 
+  characterCountRadioButton: string = ""
   onFilterRadioButtonChanged(data: string){
     this.characterCountRadioButton = data
-    console.log(this.characterCountRadioButton)
+  }
+
+  sovereignHakiStatus: string = "All"
+  onFilterSovereignHakiStatusChanged(data: string) {
+    this.sovereignHakiStatus = data
+  }
+
+  armameentHakiStatus: string = "All"
+  onFilterArmameentHakiStatusChanged(data: string) {
+    this.armameentHakiStatus = data
+  }
+
+  observationHakiStatus: string = "All"
+  onFilterObservationHakiStatusChanged(data: string) {
+    this.observationHakiStatus = data
   }
 
   onSort(condition: string) {
@@ -88,20 +101,6 @@ export class CharacterListComponent implements OnInit {
       }
     }
     this.characters.sort(func)
-    console.log(this.characters)
   }
 
 }
-// if (condition === 'bounty_ascending') {
-//   this.characters.sort((function (a: any, b: any) {
-//     return (a.bounty < b.bounty) ? -1 : 1;
-//   }))
-// } else if (condition === 'bounty_descending') {
-//   this.characters.sort((function (a: any, b: any) {
-//     return (a.bounty > b.bounty) ? -1 : 1;
-//   }))
-// } else {
-//   this.characters.sort((function (a: any, b: any) {
-//     return (a.id < b.id) ? -1 : 1;
-//   }))
-// }

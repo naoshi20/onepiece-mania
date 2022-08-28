@@ -8,6 +8,9 @@ import { CharacterService } from './shared/character.service';
 import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
 import { SortComponent } from './sort/sort.component'
+import { FilterSovereignHakiComponent } from './filter-sovereign-haki/filter.component'
+import { FilterObservationHakiComponent } from './filter-observation-haki/filter.component'
+import { FilterArmameentHakiComponent } from './filter-armameent-haki/filter.component'
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
@@ -28,6 +31,9 @@ const routes: Routes = [
                 SearchComponent,
                 FilterComponent,
                 SortComponent,
+                FilterSovereignHakiComponent,
+                FilterObservationHakiComponent,
+                FilterArmameentHakiComponent
         ],
         imports: [
                 RouterModule.forChild(routes),

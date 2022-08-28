@@ -1,0 +1,18 @@
+<form class="filter-container">
+        <span>見聞色の覇気：</span>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="observation_haki_1" type="radio" name="filter" value="All" [(ngModel)]="selectedHakiStatus"
+                (change)="onfilterRadioButtonChanged()">
+                <label class="form-check-label" for="observation_haki_1">全て</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="observation_haki_2" type="radio" name="filter" value="あり"  [(ngModel)]="selectedHakiStatus"
+                (change)="onfilterRadioButtonChanged()">
+                <label class="form-check-label" for="observation_haki_2">あり</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="observation_haki_3" type="radio" name="filter" value="なし"  [(ngModel)]="selectedHakiStatus"
+                (change)="onfilterRadioButtonChanged()">
+                <label class="form-check-label" for="observation_haki_3">なし</label>
+        </div>
+</form>

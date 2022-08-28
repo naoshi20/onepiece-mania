@@ -6,15 +6,47 @@
         </div>
         <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
         <app-filter (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+        <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)"></app-filter-sovereign-haki>
+        <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)"></app-filter-armameent-haki>
+        <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)"></app-filter-observation-haki>
         <app-sort (sortRadioButtonChanged)="onSort($event)"></app-sort>
         <div class="container">
                 <div class="row">
                         <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
-                                <div *ngIf="(characterCountRadioButton === 'All' && searchText === '') || 
-                                (characterCountRadioButton === 'All' && character.char_name.includes(searchText)) ||
-                                (character.place_of_birth.includes(characterCountRadioButton) && character.char_name.includes(searchText))" 
-                                class="col-md-3 col-sm"><!--searchText === '' ||character.char_name.includes(searchText) &&-->
-                                <!--characterCountRadioButton === '偉大なる航路'; then character.place_of_birth.includes('偉大なる航路 新世界'); else -->
+                                <div *ngIf="
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (searchText === '' && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) || 
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') || 
+                                        (searchText === '' && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) || 
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && characterCountRadioButton === 'All' && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === 'All' && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki) ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === 'All' && observationHakiStatus === character.observation_haki) || 
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All') ||
+                                        (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki)"
+                                        class="col-md-3 col-sm">
                                         <a [routerLink]="[ character._id ]">
                                                 <div class="card">
                                                         <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
@@ -24,6 +56,19 @@
                                                 </div>
                                         </a>
                                 </div>
+                                <!--<div *ngIf="(characterCountRadioButton === 'All' && searchText === '') || 
+                                (characterCountRadioButton === 'All' && character.char_name.includes(searchText)) ||
+                                (character.place_of_birth.includes(characterCountRadioButton) && character.char_name.includes(searchText))" 
+                                class="col-md-3 col-sm">
+                                        <a [routerLink]="[ character._id ]">
+                                                <div class="card">
+                                                        <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
+                                                        <div class="card-body">
+                                                                <h5 class="card-text">{{ character.char_name }}</h5>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                </div>-->
                         </ng-container>
                 </div>
         </div>
