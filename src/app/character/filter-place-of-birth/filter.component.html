@@ -1,38 +1,24 @@
-<form class="filter-container">
-        <span>出身の海：</span>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_1" type="radio" name="filter" value="All" [(ngModel)]="selectedPlaceOfBirth"
-                        (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="place_of_birth_1">この条件を使用しない</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_2" type="radio" name="filter" value="東の海" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="place_of_birth_2">東の海</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_3" type="radio" name="filter" value="西の海" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()" >
-                <label class="form-check-label" for="place_of_birth_3">西の海</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_4" type="radio" name="filter" value="南の海" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="place_of_birth_4">南の海</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_5" type="radio" name="filter" value="北の海" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="place_of_birth_5">北の海</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_6" type="radio" name="filter" value="偉大なる航路" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()" >
-                <label class="form-check-label" for="place_of_birth_6">偉大なる航路</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="place_of_birth_7" type="radio" name="filter" value="偉大なる航路 新世界" [(ngModel)]="selectedPlaceOfBirth"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="place_of_birth_7">偉大なる航路 新世界</label>
-        </div>
-</form>
+<label for="inputState">出身の海</label>
+<select id="inputState" class="form-control" [(ngModel)]="selectedPlaceOfBirth"
+        (change)="onfilterRadioButtonChanged()">
+        <option value="All">
+        </option>
+        <option value="東の海">
+                東の海
+        </option>
+        <option value="西の海">
+                西の海
+        </option>
+        <option value="南の海">
+                南の海
+        </option>
+        <option value="北の海">
+                北の海
+        </option>
+        <option value="偉大なる航路">
+                偉大なる航路
+        </option>
+        <option value="偉大なる航路 新世界">
+                偉大なる航路 新世界
+        </option>
+</select>

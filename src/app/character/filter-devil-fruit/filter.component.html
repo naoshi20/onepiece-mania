@@ -1,18 +1,11 @@
-<form class="filter-container">
-        <span>悪魔の実：</span>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="devil_fruit_1" type="radio" name="filter" value="All" [(ngModel)]="selectedDevilFruitStatus"
-                (change)="onfilterDevilFruitStatusChanged()">
-                <label class="form-check-label" for="devil_fruit_1">この条件を使用しない</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="devil_fruit_2" type="radio" name="filter" value="1"  [(ngModel)]="selectedDevilFruitStatus"
-                (change)="onfilterDevilFruitStatusChanged()">
-                <label class="form-check-label" for="devil_fruit_2">あり</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="devil_fruit_3" type="radio" name="filter" value="0"  [(ngModel)]="selectedDevilFruitStatus"
-                (change)="onfilterDevilFruitStatusChanged()">
-                <label class="form-check-label" for="devil_fruit_3">なし</label>
-        </div>
-</form>
+<label for="inputState">悪魔の実</label>
+<select id="inputState" class="form-control" [(ngModel)]="selectedDevilFruitStatus" (change)="onfilterDevilFruitStatusChanged()">
+        <option value="All">
+        </option>
+        <option value="1">
+                あり
+        </option>
+        <option value="0">
+                なし
+        </option>
+</select>

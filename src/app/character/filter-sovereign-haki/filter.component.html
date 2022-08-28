@@ -1,18 +1,11 @@
-<form class="filter-container">
-        <span>覇王色の覇気：</span>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="sovereign_haki_1" type="radio" name="filter" value="All" [(ngModel)]="selectedHakiStatus"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="sovereign_haki_1">この条件を使用しない</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="sovereign_haki_2" type="radio" name="filter" value="あり"  [(ngModel)]="selectedHakiStatus"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="sovereign_haki_2">あり</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" id="sovereign_haki_3" type="radio" name="filter" value="なし"  [(ngModel)]="selectedHakiStatus"
-                (change)="onfilterRadioButtonChanged()">
-                <label class="form-check-label" for="sovereign_haki_3">なし</label>
-        </div>
-</form>
+<label for="inputState">覇王色</label>
+<select id="inputState" class="form-control" [(ngModel)]="selectedHakiStatus" (change)="onfilterRadioButtonChanged()">
+        <option value="All">
+        </option>
+        <option value="あり">
+                有
+        </option>
+        <option value="なし">
+                無
+        </option>
+</select>
