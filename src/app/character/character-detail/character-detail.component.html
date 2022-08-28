@@ -56,9 +56,9 @@
                                                         <span>通り名</span>
                                                         <span>{{ character.popular_name }}</span>
                                                 </li>
-                                                <li *ngIf="character.devil_fruit">
+                                                <li *ngIf="character.devil_fruit_name">
                                                         <span>悪魔の実</span>
-                                                        <span>{{ character.devil_fruit }}</span>
+                                                        <span>{{ character.devil_fruit_name }}({{ character.devil_fruit_category }})</span>
                                                 </li>
                                                 <li *ngIf="character.sovereign_haki">
                                                         <span>覇王色の覇気</span>

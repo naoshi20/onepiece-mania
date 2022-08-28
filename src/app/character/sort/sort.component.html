@@ -1,8 +1,9 @@
 <div class="sort-container">
+        <span>並び替え方法：</span>
         <div class="form-check form-check-inline">
                 <input class="form-check-input" id="1" type="radio" name="sort" value="notSorted"
                         [(ngModel)]="selectedSortStatus" (change)="onSortRadioButtonChanged()">
-                <label class="form-check-label" for="1">並び替えなし</label>
+                <label class="form-check-label" for="1">通常</label>
         </div>
         <div class="form-check form-check-inline">
                 <input class="form-check-input" id="2" type="radio" name="sort" value="bounty_descending" [(ngModel)]="selectedSortStatus"

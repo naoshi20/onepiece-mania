@@ -7,10 +7,11 @@ import { CharacterComponent } from './character.component';
 import { CharacterService } from './shared/character.service';
 import { SearchComponent } from './search/search.component';
 import { FilterPlaceOfBirthComponent } from './filter-place-of-birth/filter.component';
-import { SortComponent } from './sort/sort.component'
+import { FilterDevilFruitComponent } from './filter-devil-fruit/filter.component';
 import { FilterSovereignHakiComponent } from './filter-sovereign-haki/filter.component'
 import { FilterObservationHakiComponent } from './filter-observation-haki/filter.component'
 import { FilterArmameentHakiComponent } from './filter-armameent-haki/filter.component'
+import { SortComponent } from './sort/sort.component'
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
@@ -30,10 +31,11 @@ const routes: Routes = [
                 CharacterListComponent,
                 SearchComponent,
                 FilterPlaceOfBirthComponent,
-                SortComponent,
+                FilterDevilFruitComponent,
                 FilterSovereignHakiComponent,
                 FilterObservationHakiComponent,
-                FilterArmameentHakiComponent
+                FilterArmameentHakiComponent,
+                SortComponent,
         ],
         imports: [
                 RouterModule.forChild(routes),

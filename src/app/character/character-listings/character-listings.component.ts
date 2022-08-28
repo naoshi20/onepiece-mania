@@ -54,6 +54,12 @@ export class CharacterListComponent implements OnInit {
     this.characterCountRadioButton = data
   }
 
+  devilFruitStatus: string = "All"
+  onFilterDevilFruitStatusChanged(data: string) {
+    this.devilFruitStatus = data
+    console.log(this.devilFruitStatus)
+  }
+
   sovereignHakiStatus: string = "All"
   onFilterSovereignHakiStatusChanged(data: string) {
     this.sovereignHakiStatus = data
