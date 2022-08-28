@@ -6,16 +6,20 @@
         </div>
         <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search><!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
         <app-filter (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+        <app-sort (sortRadioButtonChanged)="onSort($event)"></app-sort>
         <div class="container">
                 <div class="row">
                         <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
-                                <div *ngIf="characterCountRadioButton === 'All'|| character.place_of_birth.includes(characterCountRadioButton)" class="col-md-3 col-sm"><!--複雑な条件では関数を渡すことも可能--><!--searchText === '' ||character.char_name.includes(searchText) &&-->
+                                <div *ngIf="(characterCountRadioButton === 'All' && searchText === '') || 
+                                (characterCountRadioButton === 'All' && character.char_name.includes(searchText)) ||
+                                (character.place_of_birth.includes(characterCountRadioButton) && character.char_name.includes(searchText))" 
+                                class="col-md-3 col-sm"><!--searchText === '' ||character.char_name.includes(searchText) &&-->
+                                <!--characterCountRadioButton === '偉大なる航路'; then character.place_of_birth.includes('偉大なる航路 新世界'); else -->
                                         <a [routerLink]="[ character._id ]">
                                                 <div class="card">
                                                         <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
                                                         <div class="card-body">
                                                                 <h5 class="card-text">{{ character.char_name }}</h5>
-                                                                <p class="card-text">{{ character.description }}</p>
                                                         </div>
                                                 </div>
                                         </a>

@@ -7,6 +7,7 @@ import { CharacterComponent } from './character.component';
 import { CharacterService } from './shared/character.service';
 import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
+import { SortComponent } from './sort/sort.component'
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
                 CharacterDetailComponent,
                 CharacterListComponent,
                 SearchComponent,
-                FilterComponent
+                FilterComponent,
+                SortComponent,
         ],
         imports: [
                 RouterModule.forChild(routes),

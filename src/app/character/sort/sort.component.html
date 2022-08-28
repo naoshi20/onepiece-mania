@@ -1,0 +1,37 @@
+<div class="sort-container">
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="1" type="radio" name="sort" value="notSorted"
+                        [(ngModel)]="selectedSortStatus" (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="1">並び替えなし</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="2" type="radio" name="sort" value="bounty_descending" [(ngModel)]="selectedSortStatus"
+                (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="2">懸賞金が高い順</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="3" type="radio" name="sort" value="bounty_ascending" [(ngModel)]="selectedSortStatus"
+                (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="3">懸賞金が低い順</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="4" type="radio" name="sort" value="height_descending" [(ngModel)]="selectedSortStatus"
+                        (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="4">身長が高い順</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="5" type="radio" name="sort" value="height_ascending" [(ngModel)]="selectedSortStatus"
+                        (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="5">身長が低い順</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="6" type="radio" name="sort" value="age_descending" [(ngModel)]="selectedSortStatus"
+                        (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="6">年齢が高い順</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" id="7" type="radio" name="sort" value="age_ascending" [(ngModel)]="selectedSortStatus"
+                        (change)="onSortRadioButtonChanged()">
+                <label class="form-check-label" for="7">年齢が低い順</label>
+        </div>
+</div>

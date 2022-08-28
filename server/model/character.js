@@ -22,7 +22,7 @@ const CharacterSchema = Schema({
         blood_type: String,
         place_of_birth: String,
         favorite_food: String,
-        bounty: String,
+        bounty: Number,
         cv: String,
         popular_name: String,
         devil_fruit: String,
