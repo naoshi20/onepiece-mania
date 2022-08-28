@@ -45,11 +45,62 @@ export class CharacterListComponent implements OnInit {
     )
   }
   searchText: string = ""
-
   onSearchTextEntered(searchValue: string){
     this.searchText = searchValue
-    console.log(this.searchText)
+  }
+
+  characterCountRadioButton: string = ""
+  onFilterRadioButtonChanged(data: string){
+    this.characterCountRadioButton = data
+  }
+
+  sovereignHakiStatus: string = "All"
+  onFilterSovereignHakiStatusChanged(data: string) {
+    this.sovereignHakiStatus = data
+  }
+
+  armameentHakiStatus: string = "All"
+  onFilterArmameentHakiStatusChanged(data: string) {
+    this.armameentHakiStatus = data
+  }
+
+  observationHakiStatus: string = "All"
+  onFilterObservationHakiStatusChanged(data: string) {
+    this.observationHakiStatus = data
+  }
+
+  onSort(condition: string) {
+    let func: Function;
+    if (condition === 'bounty_ascending') {
+      func = function (a: any, b: any) {
+        return (a.bounty < b.bounty) ? -1 : 1;
+      }
+    } else if (condition === 'bounty_descending') {
+      func = function (a: any, b: any) {
+        return (a.bounty > b.bounty) ? -1 : 1;
+      }
+    } else if (condition === 'height_ascending') {
+      func = function (a: any, b: any) {
+        return (a.height < b.height) ? -1 : 1;
+      }
+    } else if (condition === 'height_descending') {
+      func = function (a: any, b: any) {
+        return (a.height > b.height) ? -1 : 1;
+      }
+    } else if (condition === 'age_ascending') {
+      func = function (a: any, b: any) {
+        return (a.age < b.age) ? -1 : 1;
+      }
+    } else if (condition === 'age_descending') {
+      func = function (a: any, b: any) {
+        return (a.age > b.age) ? -1 : 1;
+      }
+    } else {
+      func = function (a: any, b: any) {
+        return (a.id < b.id) ? -1 : 1;
+      }
+    }
+    this.characters.sort(func)
   }
 
 }
-
