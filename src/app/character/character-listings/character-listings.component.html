@@ -7,12 +7,12 @@
         <div class="container">
                 <div class="row">
                         <!--searchTextChangedが発火された時にエミッとされる値を$eventで受け取る、onSearchTextEntered親コンポーネントのメソッドを発火させる-->
-                        <app-filter-place-of-birth (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)" class="form-group col-md-2"></app-filter-place-of-birth>
-                        <app-filter-devil-fruit (filterDevilFruitStatusChanged)="onFilterDevilFruitStatusChanged($event)" class="form-group col-md-2"></app-filter-devil-fruit>
-                        <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)" class="form-group col-md-1"></app-filter-sovereign-haki>
-                        <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)" class="form-group col-md-1"></app-filter-armameent-haki>
-                        <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)" class="form-group col-md-1"></app-filter-observation-haki>
-                        <app-search (searchTextChanged)="onSearchTextEntered($event)" class="form-group col-md-3"></app-search>
+                        <app-filter-place-of-birth (filterRadioButtonChanged)="onFilterRadioButtonChanged($event)" class="form-group col-md-3 col-sm-2 col-6"></app-filter-place-of-birth>
+                        <app-filter-devil-fruit (filterDevilFruitStatusChanged)="onFilterDevilFruitStatusChanged($event)" class="form-group col-md-3 col-sm-2 col-6"></app-filter-devil-fruit>
+                        <app-filter-sovereign-haki (filterSovereignHakiStatusChanged)="onFilterSovereignHakiStatusChanged($event)" class="form-group col-md-1 col-sm-2 col-4"></app-filter-sovereign-haki>
+                        <app-filter-armameent-haki (filterArmameentHakiStatusChanged)="onFilterArmameentHakiStatusChanged($event)" class="form-group col-md-1 col-sm-2 col-4"></app-filter-armameent-haki>
+                        <app-filter-observation-haki (filterObservationHakiStatusChanged)="onFilterObservationHakiStatusChanged($event)" class="form-group col-md-1 col-sm-2 col-4"></app-filter-observation-haki>
+                        <app-search (searchTextChanged)="onSearchTextEntered($event)" class="form-group col-md-3 col-sm-2 col-12"></app-search>
                         <app-sort (sortRadioButtonChanged)="onSort($event)" class="search-filter-sort-container"></app-sort>
                         <ng-container  *ngFor="let character of characters; let characterId = index" ><!--ng-containerタグはhtmlとして表示されない、angular変数を記述するときに使う-->
                                 <div *ngIf="
@@ -80,7 +80,7 @@
                                         (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === 'All' && devilFruitStatus == character.devil_fruit_flag) ||
                                         (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki && devilFruitStatus === 'All') ||
                                         (character.char_name.includes(searchText) && character.place_of_birth.includes(characterCountRadioButton) && sovereignHakiStatus === character.sovereign_haki && armameentHakiStatus === character.armameent_haki && observationHakiStatus === character.observation_haki && devilFruitStatus == character.devil_fruit_flag)"
-                                        class="col-md-3 col-sm">
+                                        class="col-md-3 col-sm-4 col-6">
                                         <a [routerLink]="[ character._id ]">
                                                 <div class="card">
                                                         <img class="card-img-top" src="{{ character.face_img }}" alt="Card image cap">
