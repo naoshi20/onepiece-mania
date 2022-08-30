@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-Character = require('../model/character')
+const Character = require('../model/character')
 
 router.get('', function (req, res) {
         Character.find({}, function (err, foundCharacters) {

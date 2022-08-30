@@ -18,7 +18,7 @@ export class CharacterListComponent implements OnInit {
           return (a.id < b.id) ? -1 : 1;
         }); // id基準で並び替え
         this.characters = data
-        console.log('got value ' + data)
+        console.log("Success!")
         //debugger
       },
       (err) => { console.error('something wrong occur') + err },

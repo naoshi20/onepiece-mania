@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const config = require('./config/index') //switcherを利用して環境を分ける
 const SampleDb = require('./sample-db')
 
@@ -20,6 +21,7 @@ mongoose.connect(config.DB_URI, {
 )
 
 const app = express()
+app.use(bodyParser.json())
 
 app.use('/api/v1/characters', characterRoutes)
 app.use('/api/v1/users', userRoutes)

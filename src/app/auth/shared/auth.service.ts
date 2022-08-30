@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { characters } from "src/app/characters";
 import { HttpClient } from '@angular/common/http'; //バックエンドへリクエストを送るためのモジュール
 import { Observable } from 'rxjs';
 
@@ -12,7 +11,11 @@ export class AuthService {
         //         return this.http.get('/api/v1/characters') //相対パスで指定、CORSの問題でエラーが発生するので、Proxyを挟んで対応する（/proxy.conf.json参照）
         // }
 
-        // getCharacterById(characterId: string): Observable<any> {
-        //         return this.http.get('/api/v1/characters/' + characterId) //debugger挟んでもよい
-        // }
+        register(userData: any): Observable<any> {
+                return this.http.post('/api/v1/users/register', userData) 
+        }
+
+        login(userData: any): Observable<any> {
+                return this.http.post('/api/v1/users/login', userData)
+        }
 }

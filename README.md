@@ -24,10 +24,10 @@
 
 ## Technologies Used
 - MEAN Stack
-	- MongoDB - v 6.0
-	- Express - v 4.18.1
-	- Angular - v 14.1.1
-	- Node.js - v 17.0.1
+	- MongoDB - v6.0
+	- Express - v4.18.1
+	- Angular - v14.1.1
+	- Node.js - v17.0.1
 - Heroku
 
 
@@ -94,3 +94,46 @@ Thanks for your greate course.
 
 ## Contact
 Created by [@naoshi20](https://github.com/naoshi20) - feel free to contact me!
+
+## Knowledge MEMO
+### How to Debug Node server
+In POSTMAN, select JSON format in BODY tag and input body request data (post request)
+
+1. setup launch.js
+‘‘‘
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/server/index.js"
+    }
+  ]
+}
+‘‘‘
+2. click on debug point
+3. start debug
+4. send post request
+5. watch variables in VScode or hover on source code
+
+## UserResister Function
+[WireFrame|https://wireframepro.mockflow.com/view/MWj50RkWgob]
+[FlowChart|https://drive.google.com/file/d/1JKs8QQhZGXGycTOVwYmn1pQdY9NfY9Pa/view?usp=sharing]
+[OpenApi(Swagger)|https://app.swaggerhub.com/apis-docs/NAOSHISTPAUL/CreateUser-onepiecemania/1.0.0]
+
+## UserLogin Function
+[Image|img/jwt.png]
+
+## get createve point
+- hash password (bcrypt)
+- (JWT)
+
+## Installed Modules
+- body-parser
+- bcrypt
+- jsonwebtoken
