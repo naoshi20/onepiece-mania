@@ -18,6 +18,18 @@
                             </a>
                         </div>
                         <form class="register-form" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+                            <label>メールアドレス</label>
+                            <div class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+                                </div>
+                            
+                                <input [(ngModel)]="email" name="email" type="email" class="form-control" placeholder="メールアドレス"
+                                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                            </div>
+
                             <label>ユーザー名</label>
                             <div class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
@@ -28,20 +40,6 @@
 
                                 <input [(ngModel)]="username" name="username" type="text" class="form-control"
                                     placeholder="ユーザー名" required>
-                            </div>
-
-                            <label>メールアドレス</label>
-                            <div class="input-group form-group-no-border">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="nc-icon nc-email-85"></i>
-                                    </span>
-                                </div>
-
-                                <input [(ngModel)]="email" name="email" type="email" class="form-control"
-                                    placeholder="メールアドレス"
-                                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                    required>
                             </div>
 
                             <label>パスワード</label>
