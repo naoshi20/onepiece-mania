@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     login(loginForm: NgForm) {
         console.log(loginForm.value)
         this.authService.login(loginForm.value).subscribe(
-            (result) => {
+            (token) => {
                 console.log("Success!")
                 this.router.navigate(['/characters'])
             },

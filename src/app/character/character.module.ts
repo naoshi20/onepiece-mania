@@ -13,13 +13,18 @@ import { FilterObservationHakiComponent } from './filter-observation-haki/filter
 import { FilterArmameentHakiComponent } from './filter-armameent-haki/filter.component'
 import { SortComponent } from './sort/sort.component'
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from '../auth/shared/auth.guard';
 
 const routes: Routes = [
         {
                 path: "characters", component: CharacterComponent,
                 children: [
                         { path: '', component: CharacterListComponent },
-                        { path: ':characterId', component: CharacterDetailComponent },
+                        { 
+                                path: ':characterId', 
+                                component: CharacterDetailComponent, 
+                                //canActivate: [AuthGuard] 
+                        }, // canActivate: [AuthGuard]で、認証がないと見られないページになる
                 ]
         }
 ];

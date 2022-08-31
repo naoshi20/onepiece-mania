@@ -54,7 +54,7 @@ In /server, you should start node server.
 `$ node index.js`
 ### production environment
 Before deployment 
-1. In root, you have to build and make dist directory
+1. In root, you have to build and make dist directory (production build)
 `$ npm run build`
 2. make MongoDB project and get connection string
 3. copy and paste it in /server/config/prod.js
@@ -137,3 +137,8 @@ In POSTMAN, select JSON format in BODY tag and input body request data (post req
 - body-parser
 - bcrypt
 - jsonwebtoken
+- @auth0/angular-jwt
+- moment
+
+## AuthGuard
+- To protect page for non-login user from see a specific page, you should add AuthMiddleware to backend(routes>characters.js) and AuthGuard to frontend(charactermolule.ts).
