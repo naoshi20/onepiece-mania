@@ -1,9 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const config = require('./config/index') //switcherを利用して環境を分ける
 const SampleDb = require('./sample-db')
 
 const characterRoutes = require('./routes/characters')
+const userRoutes = require('./routes/users')
 const path = require('path')
 //Promiseオブジェクトの状態がfullfilledになったらthenメソッドの引数であるコールバック関数が実行される。
 mongoose.connect(config.DB_URI, {
@@ -19,8 +21,10 @@ mongoose.connect(config.DB_URI, {
 )
 
 const app = express()
+app.use(bodyParser.json())
 
 app.use('/api/v1/characters', characterRoutes)
+app.use('/api/v1/users', userRoutes)
 
 if (process.env.NODE_ENV === 'production') {
         const appPath = path.join(__dirname, '..', 'dist', 'my-first-app') //pathのベタ書き注意
